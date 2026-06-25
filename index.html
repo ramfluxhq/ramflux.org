@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>document.documentElement.classList.add('js')</script>
+<title>Ramflux — a terminal for the next era of conversation</title>
+<meta name="description" content="Open-source, self-hostable, end-to-end-encrypted federated messaging where people, organizations, and AI agents share one space." />
+<meta name="theme-color" content="#b43a2f" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Space+Mono:wght@400;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<!-- brand mark (reused) -->
+<svg width="0" height="0" style="position:absolute"><defs>
+  <filter id="ink" x="-25%" y="-25%" width="150%" height="150%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="5"/><feDisplacementMap in="SourceGraphic" scale="1.6"/></filter>
+</defs></svg>
+
+<header class="bar"><div class="wrap">
+  <a class="brand" href="#top">
+    <svg viewBox="0 0 100 100"><g filter="url(#ink)"><path d="M 18 50 C 32 26,44 26,50 50 C 56 74,68 74,82 50" fill="none" stroke="var(--fg)" stroke-width="7" stroke-linecap="round"/><circle cx="18" cy="50" r="6.4" fill="var(--vermilion)"/><circle cx="82" cy="50" r="6.6" fill="none" stroke="var(--fg)" stroke-width="4"/></g></svg>
+    Ramflux
+  </a>
+  <nav class="navlinks">
+    <a href="#vision">Vision</a>
+    <a href="#terminals">Terminals</a>
+    <a href="#ai">AI</a>
+    <a href="#family">Family</a>
+    <a class="ghub" href="https://github.com/ramfluxhq" target="_blank" rel="noopener">GitHub ↗</a>
+    <a class="lang" href="zh.html" title="中文">中文</a>
+    <button class="tbtn" id="themeBtn" aria-label="toggle theme">◐</button>
+  </nav>
+</div></header>
+
+<a id="top"></a>
+<!-- ===================== HERO ===================== -->
+<section class="hero"><div class="wrap">
+  <div class="fluxwrap">
+    <svg viewBox="0 0 300 200" width="100%">
+      <g filter="url(#ink)">
+        <path class="flux-path" pathLength="1" d="M 30 100 C 80 36,120 36,150 100 C 180 164,220 164,270 100"/>
+        <path class="flux-flow" d="M 30 100 C 80 36,120 36,150 100 C 180 164,220 164,270 100"/>
+        <circle class="seal" cx="30" cy="100" r="11" fill="var(--vermilion)"/>
+        <circle cx="270" cy="100" r="12" fill="none" stroke="var(--fg)" stroke-width="6"/>
+      </g>
+    </svg>
+  </div>
+  <div class="eyebrow">open-source · self-hostable · end-to-end encrypted</div>
+  <h1>A terminal for the<br>next era of <em>conversation</em>.</h1>
+  <p class="sub">Ramflux is a federated messaging fabric where people, organizations, and AI agents share one encrypted space — running on infrastructure you own.</p>
+  <div class="cta">
+    <a class="btn" href="https://github.com/ramfluxhq" target="_blank" rel="noopener">Read the source</a>
+    <a class="btn ghost" href="#vision">See the vision ↓</a>
+  </div>
+</div></section>
+
+<!-- ===================== VISION ===================== -->
+<section id="vision"><div class="wrap grid2">
+  <div class="reveal">
+    <div class="eyebrow">the thesis</div>
+    <h2 class="big">Conversation is becoming the interface.</h2>
+    <p class="lead">For forty years we adapted to machines — windows, menus, a thousand clicks. That era is closing. The next interface is conversation: you say what you mean, and people <em>and</em> agents answer, act, and render exactly what you need — inline, in the thread.</p>
+    <p class="lead">Ramflux is where that conversation lives: encrypted end to end, federated across nodes nobody else controls, and entirely yours to run.</p>
+  </div>
+  <div class="reveal term" id="termDemo">
+    <div class="tt"><i class="r"></i><i></i><i></i><span>rf — secure session</span></div>
+    <div class="body" id="termBody"></div>
+  </div>
+</div></section>
+
+<!-- ===================== TERMINALS ===================== -->
+<section id="terminals" style="background:var(--paper-soft)"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">the surfaces</div>
+    <h2 class="big">One node. Every surface.</h2>
+    <p class="lead">A Ramflux node is the unit of trust. The same conversation renders on whatever surface you reach for — phone, shell, watch, headset, or a device you built yourself — and the keys never leave the edge.</p>
+  </div>
+  <div class="cards reveal">
+    <div class="card"><div class="k">rf · cli</div><h3>The command line, first-class</h3><p>Not an afterthought — the primary terminal. <b>rf</b> is where humans and AI agents both speak to the network: scriptable, auditable, instant.</p><div class="tag">humans + agents</div></div>
+    <div class="card"><div class="k">web · desktop · mobile · tui</div><h3>Apps for everyone else</h3><p>Web, native desktop, mobile, and a full keyboard TUI — meeting people where they already are. Same node, same keys.</p><div class="tag">your keys, the edge</div></div>
+    <div class="card"><div class="k">watch · tv · car · vr · ar</div><h3>Ambient &amp; spatial</h3><p>Glance on a watch, lean back on a TV, speak in a car, step into AR/VR. The surface reshapes to the device and your attention.</p><div class="tag">one surface, many forms</div></div>
+    <div class="card"><div class="k">hardware · sdk</div><h3>Custom hardware</h3><p>Purpose-built devices, kiosks, embedded panels. A typed SDK turns anything into a terminal onto the mesh.</p><div class="tag">build your own</div></div>
+  </div>
+  <div class="spectrum reveal">
+    <span class="hot">rf CLI</span><span>TUI</span><span>Web</span><span>Mobile</span><span>Desktop</span><span>Watch</span><span>TV</span><span>Car</span><span>VR</span><span>AR</span><span>Voice</span><span>Custom hardware</span>
+  </div>
+</div></section>
+
+<!-- ===================== AI ===================== -->
+<section id="ai"><div class="wrap grid2">
+  <div class="reveal">
+    <div class="eyebrow">the participants</div>
+    <h2 class="big">AI is a participant, not a feature.</h2>
+    <p class="lead">Agents hold their own identity. They send and receive messages, render dynamic interfaces alongside human conversation, and act only within authority you delegate — every action signed, risk-rated, and auditable.</p>
+    <p class="lead">A human stays in the loop when it matters: dual-mode approval means high-risk actions wait for a real signature. The boundary between <em>app</em> and <em>conversation</em> dissolves.</p>
+  </div>
+  <div class="reveal">
+    <div class="std" style="margin-top:0;grid-template-columns:1fr">
+      <div class="s"><div class="num">01 · identity</div><h4>Agents have lineage</h4><p style="font-size:14.5px;color:var(--ink-mute)">An agent is a first-class principal with a post-quantum federated identity — an evolving lineage, not a static key.</p></div>
+      <div class="s"><div class="num">02 · authority</div><h4>Delegated, bounded, audited</h4><p style="font-size:14.5px;color:var(--ink-mute)">Risk floors, scoped grants, and dual-mode confirmation keep autonomy inside limits you set — and a trail you can read.</p></div>
+      <div class="s"><div class="num">03 · interface</div><h4>Conversation renders UI</h4><p style="font-size:14.5px;color:var(--ink-mute)">Agents draw interactive surfaces inline in the thread, then hand control back. The conversation is the application.</p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===================== MESSAGE FLOW ===================== -->
+<section style="background:var(--paper-soft)"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">how a message moves</div>
+    <h2 class="big">Encrypted at the edge. Routed blind.</h2>
+    <p class="lead">Your node is a complete unit. The project runs only a thin control plane; an invite-only alliance lets nodes find each other. Servers carry ciphertext they can never read.</p>
+  </div>
+  <div class="flow reveal">
+    <div class="node enc"><div class="n">01 · your client</div><strong>Encrypt</strong><p>The message is sealed end-to-end before it leaves your device.</p><div class="pulse"></div></div>
+    <div class="node"><div class="n">02 · your node</div><strong>Route</strong><p>Your self-hosted node accepts ciphertext and finds the path.</p></div>
+    <div class="node"><div class="n">03 · federation</div><strong>Mesh</strong><p>Node-to-node over an authenticated mesh — QUIC-first, TCP fallback.</p></div>
+    <div class="node"><div class="n">04 · their node</div><strong>Deliver</strong><p>Durable, exactly-once delivery — surviving offline peers and crashes.</p></div>
+    <div class="node dec"><div class="n">05 · their client</div><strong>Decrypt</strong><p>Only the recipient's device can open it. The servers never could.</p></div>
+  </div>
+</div></section>
+
+<!-- ===================== SCALE: INDIVIDUAL / ORG ===================== -->
+<section><div class="wrap grid2">
+  <div class="reveal">
+    <div class="eyebrow">who runs it</div>
+    <h2 class="big">For one person. For a whole organization.</h2>
+    <p class="lead"><b>An individual</b> runs a personal node — your keys, your storage, your operators. No account on someone else's server.</p>
+    <p class="lead"><b>An organization</b> runs a federation of nodes — an invite-only alliance where teams, and their agents, find each other across a secure mesh, with policy and retention you control.</p>
+  </div>
+  <div class="reveal">
+    <div class="std" style="margin-top:0;grid-template-columns:1fr 1fr">
+      <div class="s"><div class="num">personal</div><h4>Your node</h4><ul><li>own the keys</li><li>own the storage</li><li>thin control plane only</li></ul></div>
+      <div class="s"><div class="num">organization</div><h4>Your federation</h4><ul><li>invite-only alliance</li><li>policy &amp; retention</li><li>teams + agents</li></ul></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ===================== STANDARDS / PERFORMANCE / PRIVACY ===================== -->
+<section id="standards" style="background:#100f0d;color:#f4efe6"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow" style="color:var(--vermilion-bright)">the bottom line</div>
+    <h2 class="big" style="color:#f4efe6">Built for production, not demos.</h2>
+    <p class="lead" style="color:rgba(244,239,230,.7)">What we hold ourselves to on the server side — and what you can verify, because the source is open.</p>
+  </div>
+  <div class="std reveal">
+    <div class="s" style="border-color:var(--vermilion)"><div class="num">standards</div><h4 style="color:var(--paper)">Verifiable, not asserted</h4><ul style="color:rgba(244,239,230,.72)"><li>signed releases + SBOM</li><li>small, auditable core</li><li>fail-closed cryptography</li><li>SPIFFE / mTLS / pinned CA</li></ul></div>
+    <div class="s" style="border-color:var(--vermilion)"><div class="num">performance</div><h4 style="color:var(--paper)">Engineered to scale</h4><ul style="color:rgba(244,239,230,.72)"><li>single core targets 100k msg/s</li><li>thread-per-core · io_uring</li><li>exactly-once durable delivery</li><li>survives crash &amp; partition</li></ul></div>
+    <div class="s" style="border-color:var(--vermilion)"><div class="num">privacy</div><h4 style="color:var(--paper)">Blind by design</h4><ul style="color:rgba(244,239,230,.72)"><li>end-to-end encrypted content</li><li>node-opaque relay</li><li>your keys, your storage</li><li>no logs you can't verify</li></ul></div>
+  </div>
+</div></section>
+
+<!-- ===================== FAMILY ===================== -->
+<section id="family"><div class="wrap">
+  <div class="reveal">
+    <div class="eyebrow">how it connects</div>
+    <h2 class="big">The conversation layer of a larger system.</h2>
+    <p class="lead">Ramflux doesn't stand alone. It's where the <b>Span Brain</b> family becomes a conversation — between you and the agents working on your behalf.</p>
+  </div>
+  <div class="fam reveal">
+    <div class="f"><div class="role">openprx · plan</div><h4>openpr</h4><p>Project management with built-in governance — shapes <em>what</em> gets built.</p></div>
+    <div class="f"><div class="role">openprx · act</div><h4>prx</h4><p>Self-evolving AI agents — the participants that reason and do the work.</p></div>
+    <div class="f"><div class="role">transport</div><h4>fluxpeer</h4><p>WireGuard-compatible secure mesh — the wires the packets ride.</p></div>
+    <div class="f me"><div class="role">converse</div><h4>Ramflux</h4><p>The encrypted, federated space where people and agents actually talk.</p></div>
+  </div>
+</div></section>
+
+<!-- ===================== FINAL CTA ===================== -->
+<section class="final"><div class="wrap">
+  <div class="reveal">
+    <h2>Run it <em>yourself</em>.</h2>
+    <p class="lead" style="margin:24px auto 0;text-align:center">Open core under BSD-3-Clause · clients under AGPL-3.0 · no managed plane required.</p>
+    <div class="cta" style="justify-content:center;margin-top:38px"><a class="btn" href="https://github.com/ramfluxhq" target="_blank" rel="noopener">Explore the source ↗</a></div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <div class="brand" style="font-size:15px">Ramflux</div>
+    <div class="lic">BSD-3-Clause core · AGPL-3.0 clients · © 2026 Ramflux Authors</div>
+    <div class="lic">Part of the Span Brain family — open, self-hostable, yours.</div>
+  </div>
+  <div class="mono">
+    <a href="https://github.com/ramfluxhq" target="_blank" rel="noopener">github.com/ramfluxhq</a><br>
+    <a href="mailto:security@spanbrain.org">security@spanbrain.org</a><br>
+    <a href="https://spanbrain.org" target="_blank" rel="noopener">spanbrain.org</a> · <a href="https://openprx.dev" target="_blank" rel="noopener">openprx</a> · <a href="https://fluxpeer.org" target="_blank" rel="noopener">fluxpeer</a>
+  </div>
+</div></footer>
+
+<script>
+// theme toggle (respects system, remembers)
+const root=document.documentElement, tb=document.getElementById('themeBtn');
+const saved=localStorage.getItem('rf-theme');
+if(saved) root.dataset.theme=saved;
+else if(matchMedia('(prefers-color-scheme:dark)').matches) root.dataset.theme='dark';
+tb.onclick=()=>{const n=root.dataset.theme==='dark'?'light':'dark';root.dataset.theme=n;localStorage.setItem('rf-theme',n)};
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.16});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// terminal typewriter
+const lines=[
+  {c:'p',t:'$ '},{c:'',t:'rf send @team "ship the release?"\n'},
+  {c:'who',t:'  alice  '},{c:'',t:'looks good — ship it\n'},
+  {c:'ai',t:'  ∆ planner  '},{c:'',t:'drafting release notes from openpr…\n'},
+  {c:'ai',t:'  ∆ planner  '},{c:'',t:'[ approve publish ?]  '},{c:'ok',t:'awaiting signature\n'},
+  {c:'p',t:'$ '},{c:'',t:'rf approve --sign\n'},
+  {c:'ok',t:'  ✓ approved · signed · audited\n'},
+];
+const body=document.getElementById('termBody');
+let li=0,ci=0,curSpan=null;
+function type(){
+  if(li>=lines.length){setTimeout(()=>{body.innerHTML='';li=0;ci=0;curSpan=null;type();},4200);return;}
+  const seg=lines[li];
+  if(ci===0){curSpan=document.createElement('span');curSpan.className='ln '+seg.c;body.appendChild(curSpan);}
+  curSpan.textContent=seg.t.slice(0,ci+1);
+  const justNL=seg.t[ci]==='\n';
+  ci++;
+  if(ci>=seg.t.length){li++;ci=0;}
+  const speed=seg.c==='p'?55:18;
+  setTimeout(type, justNL?240:speed);
+}
+// start terminal when visible
+const tObs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){type();tObs.disconnect()}}),{threshold:.4});
+tObs.observe(document.getElementById('termDemo'));
+
+// (download/copy CTA removed)
+</script>
+</body>
+</html>
